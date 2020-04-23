@@ -84,7 +84,7 @@ function vcs_status {
 }
 
 PROMPT='
-%{$fg[yellow]%}%m%{$reset_color%} %{$fg[white]%}如那水中的鱼儿%{$reset_color%} %{$fg[red]%}%~ %{$reset_color%}$(git_prompt_short_sha)$(git_prompt_info)
+%{$fg[yellow]%}%m%{$reset_color%} %{$fg[white]%}似那水中的鱼儿%{$reset_color%} %{$fg[red]%}%~ %{$reset_color%}$(git_prompt_short_sha)$(git_prompt_info)
 $(prompt_char) '
 
 RPROMPT='${return_status}$(git_time_since_commit)$(git_prompt_status)%{$reset_color%}%{$(echotc UP 1)%} $(vcs_status) ${_return_status}%{$(echotc DO 1)%}'
