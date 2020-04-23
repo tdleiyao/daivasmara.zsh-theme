@@ -1,9 +1,14 @@
 # daivasmara.zsh-theme
 > Chill zsh-theme, personal take on smt
 
-**明日は明日の風が吹く**: Tomorrow’s winds will blow tomorrow
+**似那水中的鱼儿**
+**轻风**
 
-**あす**: Tomorrow
+> 你如一阵轻风
+> 吹起湖面的涟漪
+> 牵动了我的心
+> 我似那水中的鱼儿
+> 留不住远去的风
 
 ![gif](./media/gif.gif)
 ![ss](https://raw.githubusercontent.com/Daivasmara/daivasmara.zsh-theme/master/media/Screenshot%20from%202020-04-15%2010-41-27.png)
