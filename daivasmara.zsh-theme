@@ -20,6 +20,9 @@ ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[cyan]%} ✭"
 ZSH_THEME_GIT_PROMPT_SHA_BEFORE="◯  %{$fg_bold[yellow]%}"
 ZSH_THEME_GIT_PROMPT_SHA_AFTER="%{$reset_color%}"
 
+# 错误警告 vcs_status()
+_return_status="%(?..%{$fg[red]%}%? ⚠️%{$reset_color%})"
+
 function prompt_char() {
   echo "%{$fg[red]%}轻风%{$reset_color%}"
 }
@@ -76,8 +79,12 @@ function git_time_since_commit() {
     fi
 }
 
+function vcs_status {
+  git_prompt_status
+}
+
 PROMPT='
 %{$fg[yellow]%}%m%{$reset_color%} %{$fg[white]%}如那水中的鱼儿%{$reset_color%} %{$fg[red]%}%~ %{$reset_color%}$(git_prompt_short_sha)$(git_prompt_info)
 $(prompt_char) '
 
-RPROMPT='${return_status}$(git_time_since_commit)$(git_prompt_status)%{$reset_color%}'
+RPROMPT='${return_status}$(git_time_since_commit)$(git_prompt_status)%{$reset_color%}%{$(echotc UP 1)%} $(vcs_status) ${_return_status}%{$(echotc DO 1)%}'
